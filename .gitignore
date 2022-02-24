@@ -1,0 +1,9 @@
+
+# auto generated wildcard
+.env
+
+# mtar file
+*.mtar
+
+# mta folder
+mta_archives/

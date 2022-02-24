@@ -1,0 +1,146 @@
+{
+  "namespace": "db",
+  "definitions": {
+    "db.Foo": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "MyService": {
+      "@source": "srv/admin-service.cds",
+      "kind": "service",
+      "@requires": "authenticated-user"
+    },
+    "MyService.Foo": {
+      "kind": "entity",
+      "@restrict": [
+        {
+          "grant": "*",
+          "to": "Auditor"
+        }
+      ],
+      "projection": {
+        "from": {
+          "ref": [
+            "db.Foo"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "MyService.Boo": {
+      "kind": "entity",
+      "@readonly": true,
+      "@restrict": [
+        {
+          "grant": "*",
+          "to": "Support"
+        }
+      ],
+      "projection": {
+        "from": {
+          "ref": [
+            "db.Foo"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "MyService.getInfo": {
+      "kind": "action",
+      "@requires": "Integration"
+    },
+    "API_Service": {
+      "@source": "srv/admin-service.cds",
+      "kind": "service",
+      "@requires": "Integration"
+    },
+    "API_Service.Foo": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "db.Foo"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "API_Service.Boo": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "db.Foo"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "freeService": {
+      "@source": "srv/admin-service.cds",
+      "kind": "service"
+    },
+    "freeService.Foo": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "db.Foo"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    },
+    "freeService.Boo": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "db.Foo"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v2.12.0",
+    "flavor": "inferred"
+  },
+  "$version": "2.0"
+}

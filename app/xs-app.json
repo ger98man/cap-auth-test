@@ -1,0 +1,15 @@
+{
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/(.*)",
+            "destination": "srv-api",
+            "authenticationType": "xsuaa"
+        },
+        {
+            "source": "^/(.*)",
+            "destination": "srv-api",
+            "authenticationType": "xsuaa"
+        }
+    ]
+}

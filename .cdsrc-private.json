@@ -1,0 +1,31 @@
+{
+  "features": {
+    "[hybrid]": {
+      "emulate_vcap_services": true
+    }
+  },
+  "requires": {
+    "[hybrid]": {
+      "auth": { "kind": "jwt-auth" },
+      "uaa": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10.hana.ondemand.com",
+          "org": "a15d103dtrial",
+          "space": "dev",
+          "instance": "auth-test-uaa",
+          "key": "auth-test-uaa-key",
+          "vcap": {
+            "label": "xsuaa",
+            "plan": "application",
+            "tags": [
+              "xsuaa"
+            ]
+          },
+          "resolved": false
+        },
+        "kind": "xsuaa"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "VCAP_SERVICES": {
+    "xsuaa": [
+      {
+        "name": "auth-test-uaa",
+        "instance_name": "auth-test-uaa",
+        "label": "xsuaa",
+        "tags": [
+          "xsuaa",
+          "endpoint:https://api.cf.us10.hana.ondemand.com",
+          "org:a15d103dtrial",
+          "space:dev"
+        ],
+        "plan": "application",
+        "credentials": {
+          "apiurl": "https://api.authentication.us10.hana.ondemand.com",
+          "clientid": "sb-auth-test-dev!t49994",
+          "clientsecret": "N5n69rM7wMA7QklXG+Gqjd68G7A=",
+          "credential-type": "instance-secret",
+          "identityzone": "a15d103dtrial",
+          "identityzoneid": "ac110af3-5260-4acc-80ab-6e759c577781",
+          "sburl": "https://internal-xsuaa.authentication.us10.hana.ondemand.com",
+          "service_key_name": "key",
+          "subaccountid": "ac110af3-5260-4acc-80ab-6e759c577781",
+          "tenantid": "ac110af3-5260-4acc-80ab-6e759c577781",
+          "tenantmode": "dedicated",
+          "uaadomain": "authentication.us10.hana.ondemand.com",
+          "url": "https://a15d103dtrial.authentication.us10.hana.ondemand.com",
+          "verificationkey": "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4YF/ZjYBrtp1XTERLzd+rDw17GFzKKihwXR+0JYykPaXDTRCwQjIHJFNtge8Rlvm8c7h9K+ePMsadFdDTDTUnU2QDE3S/DlIcYpCe5cm2PT/LJEejIWHQurVv1p7ZsxMvl2xFd9VJXfgSt66KwsrQJUOuHnm+0a1ROScZVDqjPeczk0ybjjdcKHbX2oaP3ZscWKEP85rJTv6zjSgj5VWRraPpajkrWQkQMPxu7Nw9uz7h1+3d9QvOXN2U4vy//aNz6sjb4rRlnP/zNhNrz2udqdIwJ6buHfLoGtSPJwQBzd5Y/jn8/Npo8pfLNB1i67rk/82Nwe/8qOttAb+A2QtuwIDAQAB-----END PUBLIC KEY-----",
+          "xsappname": "auth-test-dev!t49994",
+          "zoneid": "ac110af3-5260-4acc-80ab-6e759c577781"
+        }
+      }
+    ]
+  }
+}

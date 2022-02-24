@@ -1,0 +1,29 @@
+{
+  "xsappname": "auth-test",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Auditor",
+      "description": "Auditor"
+    },
+    {
+      "name": "$XSAPPNAME.Integration",
+      "description": "Integration"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Auditor",
+      "description": "generated",
+      "scope-references": ["$XSAPPNAME.Auditor"],
+      "attribute-references": []
+    },
+    {
+      "name": "Integration",
+      "description": "generated",
+      "scope-references": ["$XSAPPNAME.Integration"],
+      "attribute-references": []
+    }
+  ]
+}
